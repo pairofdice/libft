@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd_test.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 20:02:30 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/06 14:34:02 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/06 14:35:22 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/06 14:55:30 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void ft_putendl_fd(char const *s, int fd)
+int main()
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	ft_putendl_fd("Hello with no newline", 1);
+	ft_putendl_fd("Hello with no newline", 1);
+	ft_putendl_fd("Hello with no newline", 1);
+	ft_putendl_fd("Hello with no newline", 1);
+	ft_putendl_fd("Hello with no newline", 1);
+
 }
