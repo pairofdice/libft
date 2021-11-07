@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:28:01 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/06 14:16:15 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:57:51 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 		n *= -1;
 	}
-	if (n > 10)
+	if (n >= 10)
 	{
 		ft_putnbr_fd(n / 10, fd);
 		ft_putnbr_fd(n % 10, fd);

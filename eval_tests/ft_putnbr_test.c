@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:38:49 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/05 10:38:51 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:02:54 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 
 int	main(void)
 {
-	ft_putnbr(0);
-	ft_putchar('\n');
-	ft_putnbr(1);
-	ft_putchar('\n');
-	ft_putnbr(-1);
+	int i;
+
+	i = -11;
+	while (i < 12)
+	{
+		ft_putnbr(i);
+		ft_putchar(' ');
+		i++;
+	}
 	ft_putchar('\n');
 	ft_putnbr(42);
 	ft_putchar('\n');

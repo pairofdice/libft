@@ -6,11 +6,11 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:39:35 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/05 12:49:21 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/07 14:16:06 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
