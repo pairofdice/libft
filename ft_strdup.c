@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_test.c                                     :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 19:09:49 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/07 14:33:45 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/08 14:03:22 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/08 15:16:16 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-
-int main()
+char	*ft_strdup(const char *str)
 {
-	int i;
+	int		len;
+	char	*dest;
 
-	i = -11;
-	while (i < 12)
+	len = ft_strlen(src) + 1;
+	dest = (char *) malloc(sizeof(src) * len);
+	i = 0;
+	while (len--)
 	{
-		ft_putstr(ft_itoa(i));
-		ft_putstr(" ");
+		
+	}
+}
+
+
+
+char	*ft_strdup(char *src)
+{
+	int		i;
+	int		len;
+	char	*dest;
+
+	len = ft_strlen(src) + 1;
+	dest = (char *) malloc(sizeof(src) * len);
+	i = 0;
+	while (i <= len)
+	{
+		dest[i] = src[i];
 		i++;
 	}
-	ft_putchar('\n');
-	ft_putstr(ft_itoa(1929393939399393939393));
-	ft_putstr(" ");
+	dest[i] = '\0';
+	return (dest);
 }

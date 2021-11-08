@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_test.c                                     :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 19:09:49 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/07 14:33:45 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/08 12:44:34 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/08 13:23:34 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-
-int main()
+void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
+			size_t n)
 {
-	int i;
+	char	*d;
+	const char	*s;
 
-	i = -11;
-	while (i < 12)
+	d = dst;
+	s = src;
+	while (n--)
 	{
-		ft_putstr(ft_itoa(i));
-		ft_putstr(" ");
-		i++;
+		if (*s == (unsigned char)c)
+			return (++s);
+		*d++ = *s++;
 	}
-	ft_putchar('\n');
-	ft_putstr(ft_itoa(1929393939399393939393));
-	ft_putstr(" ");
+	return (NULL):
 }

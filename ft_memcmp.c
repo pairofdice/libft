@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_test.c                                     :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 19:09:49 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/07 14:33:45 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/08 13:50:47 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/08 13:56:35 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-
-int main()
+int	ft_memcmp(const void *a, const void *b, size_t n)
 {
-	int i;
-
-	i = -11;
-	while (i < 12)
+	while (*a && *b && (*a == *b) && n--)
 	{
-		ft_putstr(ft_itoa(i));
-		ft_putstr(" ");
-		i++;
+		a++;
+		b++;
 	}
-	ft_putchar('\n');
-	ft_putstr(ft_itoa(1929393939399393939393));
-	ft_putstr(" ");
+	return (*a - *b);
 }

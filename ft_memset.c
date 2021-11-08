@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_test.c                                     :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 19:09:49 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/07 14:33:45 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/08 11:24:58 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/08 12:01:15 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include <string.h>
 
-int main()
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int i;
+	size_t	i;
 
-	i = -11;
-	while (i < 12)
+	i = 0;
+	while (i < len)
 	{
-		ft_putstr(ft_itoa(i));
-		ft_putstr(" ");
+		((unsigned char *)b)[i] = c;
 		i++;
 	}
-	ft_putchar('\n');
-	ft_putstr(ft_itoa(1929393939399393939393));
-	ft_putstr(" ");
+	return (b);
 }
