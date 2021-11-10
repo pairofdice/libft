@@ -6,13 +6,13 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 19:55:17 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/06 20:03:18 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/10 19:20:16 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_tolower(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c -= 32);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
 	return (c);
 }

@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 14:00:22 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 20:21:00 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/10 14:43:57 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/10 17:29:03 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+#include "../libft.h"
+#include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+int main()
 {
-	size_t	len;
 
-	len = 0;
-	while (*s)
-	{
-		s++;
-		len++;
-	}
-	return (len);
 }

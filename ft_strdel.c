@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 14:00:22 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 20:21:00 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/10 17:38:09 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/10 17:39:46 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *s)
+void ft_strdel(char **as)
 {
-	size_t	len;
-
-	len = 0;
-	while (*s)
-	{
-		s++;
-		len++;
-	}
-	return (len);
-}
+	free(*as);
+	*as = NULL;

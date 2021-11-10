@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 14:00:22 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 20:21:00 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/10 16:05:58 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/10 16:40:38 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-size_t	ft_strlen(const char *s)
+void	*ft_memalloc(size_t size)
 {
-	size_t	len;
+	void *freshbytes;
 
-	len = 0;
-	while (*s)
-	{
-		s++;
-		len++;
-	}
-	return (len);
+	freshbytes = malloc(size * sizeof(void *));
+	if (!freshbytes)
+		return (NULL);
+	while (size--)
+		*((char)freshbytes) = '\0';
+	return (freshbytes);
 }

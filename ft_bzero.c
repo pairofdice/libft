@@ -6,13 +6,14 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 12:01:40 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/08 12:28:18 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:03:26 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <strings.h>
+#include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	memset(s, '\0', n);
+	ft_memset(s, '\0', n);
 }
