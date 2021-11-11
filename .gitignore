@@ -4,3 +4,4 @@ a.out
 *.a
 *.gch
 eval_tests/test/
+test
