@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 12:29:53 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 20:12:35 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/11 13:41:32 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*d;
-	const char	*s;
 
 	d = dst;
-	s = src;
+	if (!dst && !src)
+		return (NULL);
 	while (n--)
-		*d++ = *s++;
+		*d++ = *(char *)src++;
 	return (dst);
 }

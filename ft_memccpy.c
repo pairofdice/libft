@@ -6,23 +6,19 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 12:44:34 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/08 13:23:34 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/11 12:19:23 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
-			size_t n)
-{
-	char	*d;
-	const char	*s;
+#include "libft.h"
 
-	d = dst;
-	s = src;
-	while (n--)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+	while (*(unsigned char *)src && n--)
 	{
-		if (*s == (unsigned char)c)
-			return (++s);
-		*d++ = *s++;
+		if (*(unsigned char *)src == (unsigned char)c)
+			return (++dst);
+		*(unsigned char *)dst++ = *(unsigned char *)src++;
 	}
-	return (NULL):
+	return (NULL);
 }
