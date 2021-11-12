@@ -6,27 +6,14 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:03:22 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/08 15:16:16 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/11 15:47:39 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strdup(const char *str)
-{
-	int		len;
-	char	*dest;
+#include <stdlib.h>
+#include "libft.h"
 
-	len = ft_strlen(src) + 1;
-	dest = (char *) malloc(sizeof(src) * len);
-	i = 0;
-	while (len--)
-	{
-		
-	}
-}
-
-
-
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	int		len;
@@ -34,8 +21,10 @@ char	*ft_strdup(char *src)
 
 	len = ft_strlen(src) + 1;
 	dest = (char *) malloc(sizeof(src) * len);
+	if (!dest)
+		return (NULL);
 	i = 0;
-	while (i <= len)
+	while (i < len)
 	{
 		dest[i] = src[i];
 		i++;

@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 16:02:06 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/07 18:45:39 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/12 15:04:33 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		if (*haystack == *needle)
 		{
 			if (ft_cmp(haystack, needle))
-				return (haystack);
+				return ((char *)haystack);
 		}
 		haystack++;
 	}

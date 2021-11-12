@@ -6,20 +6,22 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:05:58 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 16:40:38 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/11 15:37:56 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memalloc(size_t size)
 {
 	void *freshbytes;
 
-	freshbytes = malloc(size * sizeof(void *));
+	if (size == 0)
+		return (NULL);
+	freshbytes = malloc(size);
 	if (!freshbytes)
 		return (NULL);
-	while (size--)
-		*((char)freshbytes) = '\0';
+	ft_memset(freshbytes, 0, size);
 	return (freshbytes);
 }

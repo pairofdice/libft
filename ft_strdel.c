@@ -6,11 +6,14 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 17:38:09 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 17:39:46 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/12 14:19:02 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 void ft_strdel(char **as)
 {
 	free(*as);
 	*as = NULL;
+}

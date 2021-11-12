@@ -6,9 +6,12 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:40:53 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 17:37:45 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/11 14:00:54 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include <stdlib.h>
 
 void ft_memdel(void **ap)
 {

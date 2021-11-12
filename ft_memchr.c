@@ -6,16 +6,18 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:38:52 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/08 13:49:09 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:31:05 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	while (n--)
 	{
-		if (*src == (unsigned char) c)
-			return (src);
+		if(*(unsigned char *)s == (unsigned char) c)
+			return ((void *)s);
+		s++;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:50:47 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/11 12:30:57 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:49:59 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 int	ft_memcmp(const void *a, const void *b, size_t n)
 {
-	while (*(unsigned char *)a && *(unsigned char *)b
-			&& (*(unsigned char *)a == *(unsigned char*)b) && n--)
+	while ((*(unsigned char *)a == *(unsigned char*)b) && --n)
 	{
 		a++;
 		b++;
 	}
-	return (*(unsigned char *)a - *(unsigned char *)b);
+	return ((*(unsigned char *)a) - (*(unsigned char *)b));
 }

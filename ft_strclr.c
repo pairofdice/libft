@@ -6,10 +6,11 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 17:42:50 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 17:44:44 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/12 14:28:51 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 void ft_strclr(char *s)
 {
 	memset(s, '\0', ft_strlen(s));

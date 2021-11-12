@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 12:44:34 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/12 13:48:28 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/11 14:03:07 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/11 14:04:40 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void ft_putendl(char const *s)
 {
-	while (n--)
-	{
-		*(unsigned char *)dst = *(unsigned char *)src;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return (++dst);
-		src++;
-		dst++;
-	}
-	return (NULL);
+	ft_putstr(s);
+	ft_putchar('\n');
 }
-
