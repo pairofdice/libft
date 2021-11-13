@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:05:58 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/11 15:37:56 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/13 14:03:52 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *freshbytes;
+	void	*freshbytes;
 
 	if (size == 0)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:47:29 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/11 15:55:41 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/13 14:52:07 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t	srclen;
 
+	if (len == 0)
+		ft_memset(dst, '\0', ft_strlen(dst));
 	srclen = ft_strlen(src);
-	if (srclen < len)
-		ft_memset(dst + srclen, '\0', len - srclen);
-	return (ft_memcpy(dst, src, srclen));
+	if (srclen >= len)
+		ft_memcpy(dst, src, len);
+	return (dst);
 }

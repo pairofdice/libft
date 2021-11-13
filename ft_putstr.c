@@ -6,13 +6,13 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 21:06:04 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/05 13:44:36 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/13 14:05:44 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr(char const *s)
+void	ft_putstr(char const *s)
 {
 	while (*s)
 		ft_putchar(*s++);

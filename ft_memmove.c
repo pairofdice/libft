@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:31:47 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/12 18:36:13 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/13 14:00:28 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (len--)
 			*(char *)dst = *(char *)src;
 	}	
-	else 
+	else
 	{
 		while (len--)
 			*(char *)(dst + len) = *(char *)(src + len);

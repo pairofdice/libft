@@ -6,11 +6,11 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 19:55:17 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 19:20:16 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/13 14:03:08 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;

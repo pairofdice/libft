@@ -6,11 +6,11 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:01:21 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/10 20:27:10 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/13 14:02:48 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c -= 32);
