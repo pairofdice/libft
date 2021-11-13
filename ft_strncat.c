@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 16:47:29 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/13 15:43:20 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/13 16:44:17 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/13 17:42:01 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	size_t	src_len;
+	size_t destlen;
+	size_t srclen;
+	size_t atmost;
 
-	src_len = ft_strlen(src);
-	if (src_len >= len)
-		return (ft_memcpy(dst, src, len));
-	ft_memcpy(dst, src, len);
-	ft_memset(dst + src_len, 0, len - src_len);
-	return (dst);
+	destlen = ft_strlen(dest);
+	srclen = ft_strlen(src);
+	atmost = srclen < n ? srclen : n;
+
+	ft_memcpy(dest + destlen, src, atmost);
+	dest[destlen + atmost] = '\0';
+	return (dest);
 }

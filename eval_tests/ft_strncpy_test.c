@@ -1,15 +1,17 @@
 #include "../libft.h"
+#include <string.h>
+
 
 int	main()
 {
-	char dst[] = "Hello";
-	char src[] = "Wor";
+	char dst[] = "abcdefg";
+	char src[] = "12";
 	int len = 3;
 	int i = 0;
 
-	ft_strncpy(dst, src, len);
+	strncpy(dst, src, len);
 
-	while (i < 6)
+	while (i < 8)
 	{
 		if (dst[i] == '\0')
 			ft_putchar('0');

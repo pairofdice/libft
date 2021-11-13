@@ -6,7 +6,7 @@
 #    By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 12:23:08 by jsaarine          #+#    #+#              #
-#    Updated: 2021/11/12 14:33:21 by jsaarine         ###   ########.fr        #
+#    Updated: 2021/11/13 16:52:11 by jsaarine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS = ft_putnbr.c ft_putchar.c ft_putstr.c ft_putnbr_fd.c ft_putendl_fd.c \
 	   ft_isascii.c ft_isprint.c ft_toupper.c ft_memccpy.c ft_memmove.c \
 	   ft_memcmp.c ft_memdel.c ft_putendl.c ft_memalloc.c ft_strdup.c \
 	   ft_strcpy.c ft_strncpy.c ft_memchr.c ft_strnew.c ft_strdel.c \
-	   ft_strclr.c ft_strstr.c
+	   ft_strclr.c ft_strstr.c ft_strcat.c ft_strncat.c
 
 OBJS = $(SRCS:.c=.o)
 
