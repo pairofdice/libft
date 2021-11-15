@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 13:31:47 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/15 12:09:59 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/15 20:26:12 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/15 20:32:24 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if (!dst && !src)
+	char	*freshness;
+	int		i;
+	int		len;
+
+	len = ft_strlen(s);
+	i = 0;
+	freshness = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!freshness)
 		return (NULL);
-	if (dst <= src)
+	while (i < len)
 	{
-		while (len--)
-			*(char *)dst++ = *(char *)src++;
-	}	
-	else
-	{
-		while (len--)
-			*(char *)(dst + len) = *(char *)(src + len);
+		freshness[i] = (*f)(i, (char)s[i]);
+		i++;
 	}
-	return (dst);
+	freshness[i] = '\0';
+	return (freshness);
 }

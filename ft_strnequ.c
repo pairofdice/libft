@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 13:31:47 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/15 12:09:59 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/15 20:45:38 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/15 20:49:54 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	if (!dst && !src)
-		return (NULL);
-	if (dst <= src)
-	{
-		while (len--)
-			*(char *)dst++ = *(char *)src++;
-	}	
-	else
-	{
-		while (len--)
-			*(char *)(dst + len) = *(char *)(src + len);
-	}
-	return (dst);
+	if (ft_strncmp(s1, s2, n) == 0)
+		return (1);
+	return (0);
 }

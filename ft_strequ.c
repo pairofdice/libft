@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 13:31:47 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/15 12:09:59 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/15 20:35:09 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/15 20:47:02 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	if (!dst && !src)
-		return (NULL);
-	if (dst <= src)
-	{
-		while (len--)
-			*(char *)dst++ = *(char *)src++;
-	}	
-	else
-	{
-		while (len--)
-			*(char *)(dst + len) = *(char *)(src + len);
-	}
-	return (dst);
+	if (ft_strcmp(s1, s2) == 0)
+		return (1);
+	return (0);
 }

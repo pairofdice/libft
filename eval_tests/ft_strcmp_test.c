@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 13:25:02 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/07 16:21:35 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/15 19:54:59 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,9 @@ int main(void)
 	printf("tested: %d\n", ft_strcmp("Hello", "Hel"));
 	printf("REF:    %d\n", strcmp("a", "d"));
 	printf("tested: %d\n", ft_strcmp("a", "d"));
+	char testa[] = "abcd";
+	char testb[] = "ABCD";
+	printf("REF:    %d\n", strcmp(testa, testb));
+
+
 }

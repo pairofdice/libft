@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 13:31:47 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/15 12:09:59 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/15 12:16:22 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/15 13:11:04 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-	if (!dst && !src)
-		return (NULL);
-	if (dst <= src)
-	{
-		while (len--)
-			*(char *)dst++ = *(char *)src++;
-	}	
+	size_t	destlen;
+	size_t	srclen;
+	size_t	atmost;
+
+	destlen = ft_strlen(dest);
+	srclen = ft_strlen(src);
+	if (destlen > dstsize)
+		return (srclen + dstsize);
+	if (srclen < dstsize)
+		atmost = srclen;
 	else
-	{
-		while (len--)
-			*(char *)(dst + len) = *(char *)(src + len);
-	}
-	return (dst);
+		atmost = dstsize;
+	ft_memcpy(dest + destlen, src, atmost);
+	dest[destlen + atmost] = '\0';
+	return (destlen + srclen);
 }

@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 13:31:47 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/15 12:09:59 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/15 18:03:26 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/15 18:15:12 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	if (!dst && !src)
-		return (NULL);
-	if (dst <= src)
+	while (*s)
 	{
-		while (len--)
-			*(char *)dst++ = *(char *)src++;
-	}	
-	else
-	{
-		while (len--)
-			*(char *)(dst + len) = *(char *)(src + len);
+		(*f)(s);
+		s++;
 	}
-	return (dst);
 }

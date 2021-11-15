@@ -1,30 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 13:31:47 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/15 12:09:59 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/15 20:53:29 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/15 20:54:00 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	* ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if (!dst && !src)
-		return (NULL);
-	if (dst <= src)
-	{
-		while (len--)
-			*(char *)dst++ = *(char *)src++;
-	}	
-	else
-	{
-		while (len--)
-			*(char *)(dst + len) = *(char *)(src + len);
-	}
-	return (dst);
+
 }

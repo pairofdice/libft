@@ -6,11 +6,12 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 16:02:06 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/12 15:04:33 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:32:39 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_cmp(const char *a, const char *b)
+#include "libft.h"
+int	ft_cmp(const char *a, const char *b)
 {
 	while (*a && *b)
 	{
@@ -24,13 +25,12 @@ int ft_cmp(const char *a, const char *b)
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
+	if (*needle == '\0')
+		return ((char *)haystack);
 	while (*haystack)
 	{
-		if (*haystack == *needle)
-		{
-			if (ft_cmp(haystack, needle))
-				return ((char *)haystack);
-		}
+		if (ft_cmp(haystack, needle))
+			return ((char *)haystack);
 		haystack++;
 	}
 	return (0);
