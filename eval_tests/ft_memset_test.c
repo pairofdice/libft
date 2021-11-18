@@ -14,7 +14,7 @@
 #include <string.h>
 #include "../libft.h"
 
-int	main(void)
+void	ft_memset_test(void)
 {
 	char a[20] = "aaaaaaaaaaaaaaaaaaa";
 	char b[20] = "aaaaaaaaaaaaaaaaaaa";

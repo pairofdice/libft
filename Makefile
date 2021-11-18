@@ -6,13 +6,11 @@
 #    By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 12:23:08 by jsaarine          #+#    #+#              #
-#    Updated: 2021/11/15 20:54:47 by jsaarine         ###   ########.fr        #
+#    Updated: 2021/11/18 15:19:29 by jsaarine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-BUILD_DIR = ./build
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -25,7 +23,7 @@ SRCS = ft_putnbr.c ft_putchar.c ft_putstr.c ft_putnbr_fd.c ft_putendl_fd.c \
 	   ft_strcpy.c ft_strncpy.c ft_memchr.c ft_strnew.c ft_strdel.c \
 	   ft_strclr.c ft_strstr.c ft_strcat.c ft_strncat.c ft_strlcat.c\
 	   ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c \
-	   ft_strnequ.c ft_strsub.c
+	   ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strsplit.c
 
 OBJS = $(SRCS:.c=.o)
 
