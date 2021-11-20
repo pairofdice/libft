@@ -3,7 +3,7 @@
 int main(void)
 {
 	// PART 1
-
+/*
 	ft_memset_test();
 	ft_bzero_test();
 	ft_memcpy_test();
@@ -49,7 +49,9 @@ int main(void)
 	ft_strsub_test();
 	ft_strjoin_test();
 	ft_strtrim_test();
+*/
 	ft_strsplit_test();
+/*
 	ft_itoa_test();
 	ft_putchar_test();
 	ft_putstr_test();
@@ -68,4 +70,5 @@ int main(void)
 	ft_lstadd_test();
 	ft_lstiter_test();
 	ft_lstmap_test();
+	*/
 }

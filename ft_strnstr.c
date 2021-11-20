@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 13:31:32 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/19 17:56:33 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/19 17:33:37 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/19 19:17:13 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *a, const char *b)
+#include "libft.h"
+
+
+int	ft_ncmp(const char *a, const char *b, size_t len)
 {
-	while (*a && *b && (*a == *b))
+	while (*a && *b &&len)
 	{
+		if (*a != *b)
+			return (0);
 		a++;
 		b++;
+		len--;
 	}
-	return (((unsigned char)*a) - ((unsigned char)*b));
+	return (1);
+}
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	if (*needle == '\0')
+		return ((char *)haystack);
+	while (*haystack && --len)
+	{
+		if (ft_ncmp(haystack, needle, len))
+			return ((char *)haystack);
+		haystack++;
+	}
+	return (0);
 }

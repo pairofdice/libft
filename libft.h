@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:17:40 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/18 15:17:31 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/19 17:36:32 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_memdel(void **ap);
 char	*ft_strstr(const char *a, const char *b);
+char	*ft_strnstr(const char *hay, const char *needle, size_t len);
 int		ft_strncmp(const char *a, const char *b, size_t n);
 int		ft_strcmp(const char *a, const char *b);
 int		ft_atoi(const char *str);
@@ -51,6 +52,8 @@ char	*ft_strncpy(char * dst, const char * src, size_t len);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char * dst, const char * src, size_t dstsize);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);

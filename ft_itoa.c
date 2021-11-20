@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:29:14 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/07 15:17:31 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/19 12:32:40 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ char	*ft_itoa(int n)
 	int		len;
 	int		i;
 	int		negative;
+	long int	nb;
+
+	nb = n;
 
 	negative = 0;
 	len = ft_nbrlen(n);
@@ -42,15 +45,16 @@ char	*ft_itoa(int n)
 		return (NULL);
 	i = 1;
 	nbr_as_str[len] = '\0';
-	if (n < 0)
+	if (nb < 0)
 	{
-		n *= -1;
+		nb *= -1;
 		negative = 1;
+		nbr_as_str[0] = '-';
 	}
 	while (i <= len)
 	{
-		nbr_as_str[len - i] = '0' + (n % 10);
-		n /= 10;
+		nbr_as_str[len - i] = '0' + (nb % 10);
+		nb /= 10;
 		i++;
 	}
 	if (negative)

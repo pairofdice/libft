@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   strrchr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 13:31:32 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/19 17:56:33 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/19 17:19:42 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/19 17:26:37 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *a, const char *b)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-	while (*a && *b && (*a == *b))
+	int	i;
+
+	i = ft_strlen(s) + 1;
+	while (i--)
 	{
-		a++;
-		b++;
+		if (s[i] == (char) c)
+			return ((char *)s + i);
 	}
-	return (((unsigned char)*a) - ((unsigned char)*b));
+
+	return (NULL);
 }
