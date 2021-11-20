@@ -6,14 +6,14 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 12:52:27 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/19 16:37:30 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:44:15 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int ft_wordcount(char const *s, char c, int wordcount)
+int	ft_wordcount(char const *s, char c, int wordcount)
 {
 	while (*s)
 	{
@@ -61,7 +61,7 @@ char	**ft_wordmalloc(char const *s, char c, int wordcount, char **words)
 	return (words);
 }
 
-char ** ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	int		wordcount;
 	char	**words;

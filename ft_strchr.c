@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 16:47:19 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/19 17:17:54 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:41:50 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	/*
-	while (*s)
-	{
-		if (*s == (char) c)
-			return ((char *)s);
-		s++;
-		if (*s == (char) c)
-			return ((char *)s);
-
-	}
-	return (NULL);
-	*/
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	i = 0;
 	len = ft_strlen(s);
@@ -37,6 +25,5 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
-
 	return (NULL);
 }

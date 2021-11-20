@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 15:17:44 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/07 15:45:25 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:42:09 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *a, const char *b, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (*a && *b && (*a == *b) && i < n)

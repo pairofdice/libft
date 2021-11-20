@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 20:45:05 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/18 15:18:10 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:44:45 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,9 @@ int	is_whitespace(char c)
 
 char	*ft_strtrim(char const *s)
 {
-
 	size_t	sstart;
 	size_t	send;
 
-//	if (s == NULL)
-//		return (NULL);
 	sstart = 0;
 	while (is_whitespace(s[sstart]))
 		sstart++;
@@ -34,5 +31,4 @@ char	*ft_strtrim(char const *s)
 	while ((is_whitespace(s[send]) || s[send] == '\0') && sstart != send)
 		send--;
 	return (ft_strsub(s, sstart, send - sstart + 1));
-
 }

@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:19:42 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/19 17:26:37 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:43:37 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ char	*ft_strrchr(const char *s, int c)
 		if (s[i] == (char) c)
 			return ((char *)s + i);
 	}
-
 	return (NULL);
 }

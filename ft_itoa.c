@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:29:14 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/19 12:32:40 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:39:40 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,13 @@ unsigned int	ft_nbrlen(long int n)
 
 char	*ft_itoa(int n)
 {
-	char	*nbr_as_str;
-	int		len;
-	int		i;
-	int		negative;
+	char		*nbr_as_str;
+	int			len;
+	int			i;
+	int			negative;
 	long int	nb;
 
 	nb = n;
-
 	negative = 0;
 	len = ft_nbrlen(n);
 	nbr_as_str = (char *)malloc(len + 1);

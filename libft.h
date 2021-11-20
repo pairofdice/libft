@@ -6,14 +6,14 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:17:40 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/19 17:36:32 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:45:48 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <string.h>
+# include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -44,14 +44,14 @@ char	**ft_strsplit(char const *s, char c);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 char	*ft_strdup(const char *s1);
-void	* ft_memalloc(size_t size);
-char	* ft_itoa(int n);
+void	*ft_memalloc(size_t size);
+char	*ft_itoa(int n);
 size_t	ft_strlen(const char *str);
-char	*ft_strcpy(char * dst, const char * src);
-char	*ft_strncpy(char * dst, const char * src, size_t len);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
-size_t	ft_strlcat(char * dst, const char * src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char * src, size_t dstsize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_isdigit(int c);
