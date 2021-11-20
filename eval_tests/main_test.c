@@ -21,7 +21,9 @@ int main(void)
 	ft_strchr_test();
 	ft_strrchr_test();
 	ft_strstr_test();
+	*/
 	ft_strnstr_test();
+	/*
 	ft_strcmp_test();
 	ft_strncmp_test();
 	ft_atoi_test();
@@ -49,9 +51,7 @@ int main(void)
 	ft_strsub_test();
 	ft_strjoin_test();
 	ft_strtrim_test();
-*/
 	ft_strsplit_test();
-/*
 	ft_itoa_test();
 	ft_putchar_test();
 	ft_putstr_test();
