@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_cmp(const char *a, const char *b)
 {
 	while (*a && *b)
