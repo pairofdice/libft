@@ -16,14 +16,12 @@ int main(void)
 	ft_strcpy_test();
 	ft_strncpy_test();
 	ft_strcat_test();
-	ft_strncat_test();
-	ft_strlcat_test();
+	ft_strncat_test(); */
+	ft_strlcat_test(); /*
 	ft_strchr_test();
 	ft_strrchr_test();
 	ft_strstr_test();
-	*/
 	ft_strnstr_test();
-	/*
 	ft_strcmp_test();
 	ft_strncmp_test();
 	ft_atoi_test();
