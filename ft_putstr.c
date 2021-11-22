@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 21:06:04 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/13 14:05:44 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:23:19 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr(char const *s)
 {
+	if (!s)
+		return ;
 	while (*s)
 		ft_putchar(*s++);
 }
