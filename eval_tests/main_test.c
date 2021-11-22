@@ -1,8 +1,11 @@
 #include "libft_test.h"
+#include <stdio.h>
+#include "ft_colors.h"
 
 int main(void)
 {
 	// PART 1
+	printf("Let the " BCYN "<PART 1>" reset" testing begin!\n\n");
 /*
 	ft_memset_test();
 	ft_bzero_test();

@@ -11,8 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_iswhitespace(char c)
+static int	ft_iswhitespace(char c)
 {
 	if (c == ' '
 		|| c == '\t'

@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:40:53 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/13 14:04:17 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/22 16:05:33 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void	ft_memdel(void **ap)
 {
+	if (!ap)
+		return ;
 	free(*ap);
 	*ap = NULL;
 }

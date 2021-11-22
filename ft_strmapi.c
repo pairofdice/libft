@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 20:26:12 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/15 20:32:24 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/22 17:41:18 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	int		len;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	i = 0;
 	freshness = (char *)malloc(sizeof(*s) * (len + 1));

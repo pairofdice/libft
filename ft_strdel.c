@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 17:38:09 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/13 14:04:45 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/22 17:37:30 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_strdel(char **as)
 {
+	if (!as)
+		return ;
 	free(*as);
 	*as = NULL;
 }

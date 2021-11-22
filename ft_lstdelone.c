@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 18:03:26 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/22 17:38:38 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/20 18:14:17 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/20 18:28:17 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striter(char *s, void (*f)(char *))
+#include <stdlib.h>
+#include "libft.h"
+
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	if (!s)
-		return ;
-	while (*s)
-	{
-		(*f)(s);
-		s++;
-	}
+	del((*alst)->content, (*alst)->content_size);
+	(*alst)->content = NULL;
+	free(*alst);
+	*alst = NULL;
+
+
 }

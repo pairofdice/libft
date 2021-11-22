@@ -6,13 +6,13 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 20:45:05 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/20 16:44:45 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/22 17:46:45 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_whitespace(char c)
+static int	is_whitespace(char c)
 {
 	if (c == ' ' || c == '\n' || c == '\t')
 		return (1);
@@ -24,6 +24,8 @@ char	*ft_strtrim(char const *s)
 	size_t	sstart;
 	size_t	send;
 
+	if (!s)
+		return (NULL);
 	sstart = 0;
 	while (is_whitespace(s[sstart]))
 		sstart++;

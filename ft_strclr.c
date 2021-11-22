@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 17:42:50 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/13 14:05:08 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/22 17:38:07 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_strclr(char *s)
 {
+	if (!s)
+		return ;
 	ft_memset(s, '\0', ft_strlen(s));
 }

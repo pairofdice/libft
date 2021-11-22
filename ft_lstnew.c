@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 18:21:31 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/22 17:40:32 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/20 17:31:45 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/20 18:10:24 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	char	*freshness;
-	int		i;
-	int		len;
+	t_list	*new;
 
-	if (!s)
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
 		return (NULL);
-	len = ft_strlen(s);
-	i = 0;
-	freshness = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!freshness)
-		return (NULL);
-	while (i < len)
 	{
-		freshness[i] = (*f)((char)s[i]);
-		i++;
+		new->content = (void *)malloc(content_size);
+		if (!new->content)
+		{
+			free(new);
+			return (NULL);
+		}
+		ft_memcpy(new->content, content, content_size);
+		if (!content || content_size == 0)
+		{
+			new->content = 0;
+			content_size = 0;
+		}
+		new->content_size = content_size;
+		new->next = NULL;
 	}
-	freshness[i] = '\0';
-	return (freshness);
+	return (new);
 }

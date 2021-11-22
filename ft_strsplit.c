@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 12:52:27 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/20 16:44:15 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/22 17:47:34 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ char	**ft_strsplit(char const *s, char c)
 	int		wordcount;
 	char	**words;
 
+	if (!s)
+		return (NULL);
 	wordcount = ft_wordcount(s, c, 0);
 	words = malloc(sizeof(char *) * (wordcount + 1));
 	if (!words)
