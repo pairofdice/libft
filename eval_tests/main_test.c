@@ -5,10 +5,10 @@
 int main(void)
 {
 	// PART 1
-	printf("Let the " BCYN "<PART 1>" reset" testing begin!\n\n");
+	printf("Let the " BCYN "<PART " BHBLU "1"BCYN ">" reset" testing begin!\n\n");
 /*
-	ft_memset_test();
-	ft_bzero_test();
+	ft_memset_test();*/
+	ft_bzero_test();/*
 	ft_memcpy_test();
 	ft_memccpy_test();
 	ft_memmove_test();
@@ -19,15 +19,15 @@ int main(void)
 	ft_strcpy_test();
 	ft_strncpy_test();
 	ft_strcat_test();
-	ft_strncat_test(); */
-	ft_strlcat_test(); /*
+	ft_strncat_test(); 
+	ft_strlcat_test(); 
 	ft_strchr_test();
 	ft_strrchr_test();
 	ft_strstr_test();
 	ft_strnstr_test();
 	ft_strcmp_test();
-	ft_strncmp_test();
-	ft_atoi_test();
+	ft_strncmp_test(); 
+	ft_atoi_test();		
 	ft_isalpha_test();
 	ft_isdigit_test();
 	ft_isalnum_test();
@@ -36,7 +36,8 @@ int main(void)
 	ft_tolower_test();
 	ft_toupper_test();
 
-	// PART 2
+	// PART 2 */
+	printf("Let the " BCYN "<PART " BHRED "2"BCYN ">" reset" testing begin!\n\n");/*
 
 	ft_memalloc_test();
 	ft_memdel_test();

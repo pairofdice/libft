@@ -10,34 +10,68 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "../libft.h"
 #include <stdio.h>
+#include <string.h>
+#include "../libft.h"
+#include "ft_colors.h"
+#include <stdlib.h>
 
-int main(void)
+
+int atoi_1(char *str)
 {
-	printf("REF:    %d\n", atoi(""));
-	printf("tested: %d\n", ft_atoi(""));
-	printf("REF:    %d\n", atoi(" \t\n\v\f\r 0x1234"));
-	printf("tested: %d\n", ft_atoi(" \t\n\v\f\r 0x1234"));
-	printf("REF:    %d\n", atoi("1yadf"));
-	printf("tested: %d\n", ft_atoi("1yadf"));
-	printf("REF:    %d\n", atoi("-1"));
-	printf("tested: %d\n", ft_atoi("-1"));
-	printf("REF:    %d\n", atoi("-10"));
-	printf("tested: %d\n", ft_atoi("-10"));
-	printf("REF:    %d\n", atoi("10"));
-	printf("tested: %d\n", ft_atoi("10"));
-	printf("REF:    %d\n", atoi("123456"));
-	printf("tested: %d\n", ft_atoi("123456"));
-	printf("REF:    %d\n", atoi("2147483647"));
-	printf("tested: %d\n", ft_atoi("2147483647"));
-	printf("REF:    %d\n", atoi(" \t \r-2147483648x12"));
-	printf("tested: %d\n", ft_atoi(" \t \r-2147483648x12"));
-	printf("REF:    %d\n", atoi(" \t \r-214748364878x12"));
-	printf("tested: %d\n", ft_atoi(" \t \r-214748364878x12"));
-	printf("REF:    %d\n", atoi("214748364778"));
-	printf("tested: %d\n", ft_atoi("214748364778"));
-	printf("REF:    %d\n", atoi("214748364778123456"));
-	printf("tested: %d\n", ft_atoi("214748364778123456"));
+	if (atoi(str) == ft_atoi(str))
+		return (1);
+	return (0);
+}
+
+void ft_atoi_test(void)
+{
+	int i = 0;
+
+	//int (*funs[])(char *) = {atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, 0};
+	char *teststrs[] = {
+		""
+		,"Hello1234there1234"
+		,"--2147483648"
+		,"+2147483647"
+		,"1234567890"
+		,"++42"
+		," \t\n\v\f\r 0x1234"
+		, "\t-2147483649acssa"
+		, "\t-2147483648aac"
+		, "\t\t-4\t\n\v\f\r2"
+		, "\t\t-1"
+		, "\t\t-0"
+		, "\t\t00042"
+		, "\t2147-483647"
+		, "\b\t21474+83648"
+		, "\r\t\t42 42"
+		, "\f\t\t 42 "
+		, "\t\tone"
+		, "\t\t--42"
+		, "\t\t+42"
+		, "\t\t+-42"
+		, "\t\t-+42"
+		, " \t a 1234aa"
+		, " \t0\t"
+		, NULL
+		, 0
+	};
+	printf("ft_atoi: \t");
+	while (teststrs[i] != 0)
+	{
+		char *str = teststrs[i];
+		if (atoi_1(str) != 0)
+			printf(BHGRN "[OK]" reset);
+		else
+		{
+			
+			printf(BHRED "\n\t\t--fail--" reset);
+			printf("\ninput:   \t%s", str);
+			printf("\natoi:    \t%d", atoi(str));
+			printf("\nft_atoi: \t%d\n\t\t", ft_atoi(str));
+		}
+		i++;
+	}
+	printf("\n");
 }

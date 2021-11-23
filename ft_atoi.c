@@ -32,9 +32,10 @@ int	ft_atoi(const char *str)
 	pos = 1;
 	while (ft_iswhitespace(*str))
 		str++;
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 	{
-		pos *= -1;
+		if (*str == '-')
+			pos *= -1;
 		str++;
 	}
 	while (ft_isdigit(*str))
