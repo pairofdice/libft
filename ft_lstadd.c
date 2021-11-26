@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:35:42 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/24 16:48:19 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:17:15 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	ft_lstadd(t_list **alst, t_list *new)
 {
 	new->next = *alst;
+	*alst = new;
 }
