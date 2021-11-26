@@ -7,8 +7,8 @@ int main(void)
 	// PART 1
 	printf("Let the " BCYN "<PART " BHBLU "1"BCYN ">" reset" testing begin!\n\n");
 /*
-	ft_memset_test();*/
-	ft_bzero_test();/*
+	ft_memset_test();
+	ft_bzero_test();
 	ft_memcpy_test();
 	ft_memccpy_test();
 	ft_memmove_test();
@@ -32,9 +32,9 @@ int main(void)
 	ft_isdigit_test();
 	ft_isalnum_test();
 	ft_isascii_test();
-	ft_isprint_test();
+	ft_isprint_test();*/
 	ft_tolower_test();
-	ft_toupper_test();
+	ft_toupper_test();/*
 
 	// PART 2 */
 	printf("Let the " BCYN "<PART " BHRED "2"BCYN ">" reset" testing begin!\n\n");/*
@@ -51,8 +51,8 @@ int main(void)
 	ft_strequ_test();
 	ft_strnequ_test();
 	ft_strsub_test();
-	ft_strjoin_test();
-	ft_strtrim_test();
+	ft_strjoin_test();*/
+	ft_strtrim_test();/*
 	ft_strsplit_test();
 	ft_itoa_test();
 	ft_putchar_test();
