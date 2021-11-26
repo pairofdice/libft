@@ -6,7 +6,7 @@
 #    By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 12:23:08 by jsaarine          #+#    #+#              #
-#    Updated: 2021/11/20 18:31:29 by jsaarine         ###   ########.fr        #
+#    Updated: 2021/11/24 16:37:22 by jsaarine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,9 @@ SRCS = ft_putnbr.c ft_putchar.c ft_putstr.c ft_putnbr_fd.c ft_putendl_fd.c \
 	   ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c \
 	   ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strsplit.c \
 	   ft_strchr.c ft_strrchr.c ft_strnstr.c \
-	   ft_lstnew.c ft_lstdelone.c ft_lstdel.c
+	   ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
+	   ft_lstmap.c 
+
 
 OBJS = $(SRCS:.c=.o)
 

@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 18:29:22 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/24 15:35:22 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/11/24 16:10:00 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/11/24 17:15:39 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	**temp;
-	while ((*alst)->next)
+	while (lst->next)
 	{
-		temp = &((*alst)->next);
-		ft_lstdelone(alst, del);
-		alst = temp;
+		f(lst);
+		lst = lst->next;
 	}
-	ft_lstdelone(alst, del);
-	free(*alst);
-	*alst = NULL;
+	f(lst);
+	return (lst);
 }
