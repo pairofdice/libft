@@ -6,13 +6,13 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 18:03:26 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/22 17:38:38 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/26 13:54:39 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if (!s)
+	if (!s || !f)
 		return ;
 	while (*s)
 	{

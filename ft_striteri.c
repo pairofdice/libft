@@ -6,7 +6,7 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 18:15:41 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/22 17:39:08 by jsaarine         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:09:18 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
-	if (!s)
+	if (!s || !f)
 		return ;
 	i = 0;
 	while (s[i] != '\0')

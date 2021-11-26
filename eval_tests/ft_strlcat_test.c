@@ -21,31 +21,18 @@ int	strlcat_a()
 	return (0);
 }
 
-int strlcat_b()
-{
-	return (0);
-}
-int strlcat_c()
-{
-	return (1);
-}
-
-int strlcat_d()
-{
-	return (1);
-}
 void ft_strlcat_test(void)
 {
-	int f_count = 4;
+	int f_i = 0;
 
-	int (*funs[])() = {strlcat_a, strlcat_b, strlcat_c, strlcat_d};
-	while (f_count--)
+	int (*funs[])() = {strlcat_a, 0};
+	while (funs[f_i] != 0)
 	{
-		if (funs[f_count]() != 0)
+		if (funs[f_i]() != 0)
 			printf(GRN "[OK]" reset);
 		else
 			printf(RED "-fail-" reset);
-
+		f_i++;
 	}
 	printf("\n");
 

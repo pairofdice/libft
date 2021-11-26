@@ -19,8 +19,8 @@ int main(void)
 	ft_strcpy_test();
 	ft_strncpy_test();
 	ft_strcat_test();
-	ft_strncat_test(); 
-	ft_strlcat_test(); 
+	ft_strncat_test(); */
+	ft_strlcat_test(); /*
 	ft_strchr_test();
 	ft_strrchr_test();
 	ft_strstr_test();
@@ -32,9 +32,9 @@ int main(void)
 	ft_isdigit_test();
 	ft_isalnum_test();
 	ft_isascii_test();
-	ft_isprint_test();*/
+	ft_isprint_test();
 	ft_tolower_test();
-	ft_toupper_test();/*
+	ft_toupper_test();
 
 	// PART 2 */
 	printf("Let the " BCYN "<PART " BHRED "2"BCYN ">" reset" testing begin!\n\n");/*
@@ -51,8 +51,8 @@ int main(void)
 	ft_strequ_test();
 	ft_strnequ_test();
 	ft_strsub_test();
-	ft_strjoin_test();*/
-	ft_strtrim_test();/*
+	ft_strjoin_test();
+	ft_strtrim_test();
 	ft_strsplit_test();
 	ft_itoa_test();
 	ft_putchar_test();
