@@ -17,7 +17,7 @@
 #include <stdlib.h>
 
 
-int memset_1(char c, int n)
+int bzero_1(void)
 {
 	void	*memREF;
 	void	*memME;
@@ -30,36 +30,60 @@ int memset_1(char c, int n)
 		return (0);
 	memset(memME, 'j', 15);
 
-	if ( memcmp(memset(memREF, c, n), ft_memset(memME, c, n), 15) == 0)
+	bzero(memREF, 15);
+	ft_bzero(memME, 15);
+	if ( memcmp(memREF, memME, 15) == 0)
 		return (1);
 	return (0);
 }
 
-	/* int (*funs[])(char *) = {atoi_1, atoi_1, 0}; */
-void ft_memset_test(void)
+int bzero_2(void)
+{
+	void	*memREF;
+	void	*memME;
+
+	if (!(memREF = malloc(sizeof(*memREF) * 15)))
+		return (0);
+	memset(memREF, 'j', 15);
+
+	if (!(memME = malloc(sizeof(*memME) * 15)))
+		return (0);
+	memset(memME, 'j', 15);
+
+	bzero(memREF, (0));
+	ft_bzero(memREF, (0));
+	if ( memcmp(memREF, memME, 15) == 0)
+		return (1);
+	return (0);
+}
+
+	/* int (*funs[])(char *) = {atoi_1, atoi_2, 0}; */
+void ft_bzero_test(void)
 {
 	int i = 0;
-	void	*mem;
+/*	void	*mem;
 
 	if (!(mem = malloc(sizeof(*mem) * 15)))
 		return ;
 	memset(mem, 'j', 15);
 
-	char test_A[] = {
+ 	char test_A[] = {
 		'c',
 		'c',
 		'\n',
 		'\0',
+		'\200',
 		0
-	};
+	}; */
 
-	size_t ints[] = {5, 14, 6, 1};
+	//size_t ints[] = {5, 14, 6, 1, 15};
+	int (*funs[])() = {bzero_1, bzero_2, 0};
 
-	printf("ft_memset: \t");
-	while (test_A[i] != 0)
+	printf("ft_bzero: \t");
+	while (funs[i] != 0)
 	{
 
-		if (memset_1(test_A[i], ints[i]) != 0)
+		if (funs[i]() != 0)
 			printf(BHGRN "💚" reset);
 		else
 		{
