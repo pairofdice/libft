@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	ft_wordcount(char const *s, char c, int wordcount)
+static int	ft_wordcount(char const *s, char c, int wordcount)
 {
 	while (*s)
 	{
@@ -30,7 +30,7 @@ int	ft_wordcount(char const *s, char c, int wordcount)
 	return (wordcount);
 }
 
-char	**ft_wordmalloc(char const *s, char c, int wordcount, char **words)
+static char	**ft_wordmalloc(char const *s, char c, int wordcount, char **words)
 {
 	int		i;
 	int		wordlen;
@@ -45,11 +45,8 @@ char	**ft_wordmalloc(char const *s, char c, int wordcount, char **words)
 		{
 			wordlen = 0;
 			wordstart = (char *)s;
-			while (*s != c && *s)
-			{
-				s++;
+			while (*s != c && *s++)
 				wordlen++;
-			}
 			words[i] = (char *)malloc(sizeof(char) * (wordlen + 1));
 			if (!words[i])
 				return (NULL);
