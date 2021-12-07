@@ -17,16 +17,16 @@
 #include <stdlib.h>
 
 
-int memset_1(char *str, int n)
+int memcpy_1(char *str, int n)
 {
 	void	*memREF;
 	void	*memME;
 
-	if (!(memREF = malloc(sizeof(*memREF) * 15)))
+	if (!(memREF = malloc(sizeof(*memREF) * 30)))
 		return (0);
 	memset(memREF, 'j', 30);
 
-	if (!(memME = malloc(sizeof(*memME) * 15)))
+	if (!(memME = malloc(sizeof(*memME) * 30)))
 		return (0);
 	memset(memME, 'j', 30);
 

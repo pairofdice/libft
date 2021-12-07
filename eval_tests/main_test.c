@@ -37,7 +37,7 @@ int main(void)
 	ft_toupper_test();
 
 	// PART 2 */
-	printf("Let the " BCYN "<PART " BHRED "2"BCYN ">" reset" testing begin!\n\n");/*
+	printf("\nLet the " BCYN "<PART " BHRED "2"BCYN ">" reset" testing begin!\n\n");/*
 
 	ft_memalloc_test();
 	ft_memdel_test();
