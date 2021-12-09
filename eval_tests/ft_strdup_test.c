@@ -17,7 +17,7 @@
 #include <stdlib.h>
 
 
-int strncpy_1(char *strA, int n)
+int strdup_1()
 {
 	void	*memREF;
 	void	*memME;
@@ -30,16 +30,18 @@ int strncpy_1(char *strA, int n)
 		return (0);
 	memset(memME, 'j', 30);
 
+	char test[] = "lorem ipsum dolor sit \0 amet";
 
-	strncpy(memREF, strA, n);
-	ft_strncpy(memME, strA, n);
+
+	memREF = strdup(test);
+	memME = ft_strdup(test);
 	if ( memcmp(memREF, memME, 30) == 0)
 		return (1);
 	return (0);
 }
 
 	/* int (*funs[])(char *) = {atoi_1, atoi_1, 0}; */
-void ft_strncpy_test(void)
+void ft_strdup_test(void)
 {
 	int i = 0;
 	void	*mem;
@@ -49,7 +51,7 @@ void ft_strncpy_test(void)
 	memset(mem, 'j', 15);
 
 	char *test_A[] = {
-		"zyxwvutsrqdgffdgfdfgdgfponmlkjihgfedcba",
+		"zyxwvutsrqponmlkjihgfedcba",
 		"zyxwvutst",
 		"zy\0xw\0vu\0\0tsr",
 		"",
@@ -58,11 +60,11 @@ void ft_strncpy_test(void)
 
 	size_t ints[] = {14, 0, 11, 1};
 
-	printf("ft_strncpy: \t");
+	printf("ft_strdup: \t");
 	while (test_A[i] != 0)
 	{
 
-		if (strncpy_1(test_A[i], ints[i]) != 0)
+		if (strdup_1() != 0)
 			printf(BHGRN "💚" reset);
 		else
 		{

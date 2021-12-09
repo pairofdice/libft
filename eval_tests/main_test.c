@@ -11,13 +11,13 @@ int main(void)
 	ft_memcpy_test();
 	ft_memccpy_test();
 	ft_memmove_test();
-/*
 	ft_memchr_test();
 	ft_memcmp_test();
 	ft_strlen_test();
 	ft_strdup_test();
 	ft_strcpy_test();
 	ft_strncpy_test();
+/*
 	ft_strcat_test();
 	ft_strncat_test();
 	ft_strlcat_test();

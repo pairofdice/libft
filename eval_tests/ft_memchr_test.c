@@ -17,9 +17,9 @@
 #include <stdlib.h>
 
 
-int memchr_1(char *str, int n)
+int memchr_1(char *str, char c, int n)
 {
-	void	*memREF;
+/* 	void	*memREF;
 	void	*memME;
 
 	if (!(memREF = malloc(sizeof(*memREF) * 30)))
@@ -28,12 +28,12 @@ int memchr_1(char *str, int n)
 
 	if (!(memME = malloc(sizeof(*memME) * 30)))
 		return (0);
-	memset(memME, 'j', 30);
+	memset(memME, 'j', 30); */
 
 
-	memchr(memREF, str, n);
-	ft_memchr(memME, str, n);
-	if ( memcmp(memREF, memME, 30) == 0)
+	/* memchr(str, c, n);
+	ft_memchr(str, c, n); */
+	if ( memcmp(memchr(str, c, n), ft_memchr(str, c, n), ft_strlen(str)) == 0)
 		return (1);
 	return (0);
 }
@@ -49,22 +49,26 @@ void ft_memchr_test(void)
 	memset(mem, 'j', 15);
 
 	char *test_A[] = {
-		"zyxwvutsrqponmlkjihgfedcba",
-		"zyxwvutst",
-		"zy\0xw\0vu\0\0tsr",
+		"/|\x12\xff\x09\x42\042\42|\\",
+/*
+		"/|\x12\xff\x09\x42\2002\42|\\",
+		"/|\x12\xff\x09\x42\042\42|\\", 
+		"/|\x12\xff\x09\x42\042\42|\\",
+		"iawhf\200wf208awfh\xakufi21f4\x42w7fwa1f",
+	 	":(){ :|: & };:", 
+		*/
 		"",
 		0
 	};
 
-	char test_C[] = { 'r', 'r', 'a', 'x'};
+	char test_C[] = { '\x42', '\200', '\x42', '\xde', '\x42', '\xde'};
 
-	size_t ints[] = {20, 3, 26, 0};
- 
+	size_t ints[] = {10, 10, 2, 10, 30, 16};
 	printf("ft_memchr: \t");
 	while (test_A[i] != 0)
 	{
 
-		if (memchr_1(test_A[i], ints[i]) != 0)
+		if (memchr_1(test_A[i], test_C[i], ints[i]) != 0)
 			printf(BHGRN "💚" reset);
 		else
 		{

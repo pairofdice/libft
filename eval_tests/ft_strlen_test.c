@@ -17,60 +17,42 @@
 #include <stdlib.h>
 
 
-int strncpy_1(char *strA, int n)
+int strlen_1(char *str)
 {
-	void	*memREF;
-	void	*memME;
-
-	if (!(memREF = malloc(sizeof(*memREF) * 30)))
-		return (0);
-	memset(memREF, 'j', 30);
-
-	if (!(memME = malloc(sizeof(*memME) * 30)))
-		return (0);
-	memset(memME, 'j', 30);
-
-
-	strncpy(memREF, strA, n);
-	ft_strncpy(memME, strA, n);
-	if ( memcmp(memREF, memME, 30) == 0)
+	if (atoi(str) == ft_atoi(str))
 		return (1);
 	return (0);
 }
 
-	/* int (*funs[])(char *) = {atoi_1, atoi_1, 0}; */
-void ft_strncpy_test(void)
+	/* int (*funs[])(char *) = {atoi_1, atoi_1, atoi_1, atoi_1, 
+				atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, 0}; */
+void ft_strlen_test(void)
 {
 	int i = 0;
-	void	*mem;
 
-	if (!(mem = malloc(sizeof(*mem) * 15)))
-		return ;
-	memset(mem, 'j', 15);
-
-	char *test_A[] = {
-		"zyxwvutsrqdgffdgfdfgdgfponmlkjihgfedcba",
-		"zyxwvutst",
-		"zy\0xw\0vu\0\0tsr",
-		"",
-		0
+	char *teststrs[] = {
+		""
+		,"0"
+		,"   \0   "
+		," \t\n\v\f\r 0x1234"
+		, " \t0\t"
+		,"🙈😘🤬😳"
+		, NULL
+		, 0
 	};
-
-	size_t ints[] = {14, 0, 11, 1};
-
-	printf("ft_strncpy: \t");
-	while (test_A[i] != 0)
+	printf("ft_strlen: \t");
+	while (teststrs[i] != 0)
 	{
-
-		if (strncpy_1(test_A[i], ints[i]) != 0)
+		char *str = teststrs[i];
+		if (strlen_1(str) != 0)
 			printf(BHGRN "💚" reset);
 		else
 		{
 			
-			printf(BHRED "💔" reset);
-			/* printf("\ninput:   \t%s %s %zu", test_A[i], ints[i]);
-			printf("\nmemset:    \t%d", memset(mem, test_A[i], ints[i]));
-			printf("\nft_memset: \t%d\n\t\t", ft_memset(mem, test_A[i], ints[i])); */
+			printf(BHRED "\t\t💔" reset);
+			printf("\ninput:   \t%s", str);
+			printf("\natoi:    \t%d", atoi(str));
+			printf("\nft_atoi: \t%d\n\t\t", ft_atoi(str));
 		}
 		i++;
 	}

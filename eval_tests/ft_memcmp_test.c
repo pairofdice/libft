@@ -17,9 +17,9 @@
 #include <stdlib.h>
 
 
-int strncpy_1(char *strA, int n)
+int memcmp_1(char *str, char *strB, int n)
 {
-	void	*memREF;
+/* 	void	*memREF;
 	void	*memME;
 
 	if (!(memREF = malloc(sizeof(*memREF) * 30)))
@@ -29,17 +29,18 @@ int strncpy_1(char *strA, int n)
 	if (!(memME = malloc(sizeof(*memME) * 30)))
 		return (0);
 	memset(memME, 'j', 30);
-
-
-	strncpy(memREF, strA, n);
-	ft_strncpy(memME, strA, n);
-	if ( memcmp(memREF, memME, 30) == 0)
+ */
+/* 
+	memcpy(str, strB, n);
+	ft_memcmp(str, strB, n); 
+*/
+	if ( memcmp(str, strB, n) ==  ft_memcmp(str, strB, n))
 		return (1);
 	return (0);
 }
 
 	/* int (*funs[])(char *) = {atoi_1, atoi_1, 0}; */
-void ft_strncpy_test(void)
+void ft_memcmp_test(void)
 {
 	int i = 0;
 	void	*mem;
@@ -49,20 +50,38 @@ void ft_strncpy_test(void)
 	memset(mem, 'j', 15);
 
 	char *test_A[] = {
-		"zyxwvutsrqdgffdgfdfgdgfponmlkjihgfedcba",
-		"zyxwvutst",
-		"zy\0xw\0vu\0\0tsr",
+		"salut",
+		"t\200",
+		"testss",
+		"test",
 		"",
+		"test",
+		"abcdefghij",
+		"abc\0defgh",
+		"zyxbcdefgh",
 		0
 	};
 
-	size_t ints[] = {14, 0, 11, 1};
+		char *test_B[] = {
+		"salut",
+		"t\0",
+		"test",
+		"tEst",
+		"test",
+		"",
+		"abcdefgxyz",
+		"abc\0eefgh",
+		"abcdefgxyz",
+		0
+	};
 
-	printf("ft_strncpy: \t");
+	size_t ints[] = {5, 2, 5, 4, 4, 7, 6, 6, 0};
+
+	printf("ft_memcmp: \t");
 	while (test_A[i] != 0)
 	{
 
-		if (strncpy_1(test_A[i], ints[i]) != 0)
+		if (memcmp_1(test_A[i], test_B[i], ints[i]) != 0)
 			printf(BHGRN "💚" reset);
 		else
 		{
