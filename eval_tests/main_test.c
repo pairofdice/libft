@@ -5,13 +5,13 @@
 int main(void)
 {
 	// PART 1
-	printf("Let the " BCYN "<PART " BHBLU "1"BCYN ">" reset" testing begin!\n\n");
+	printf("Let the " BCYN "<PART " BHRED "1"BCYN ">" reset" testing begin!\n\n");
 	ft_memset_test();
 	ft_bzero_test();
 	ft_memcpy_test();
-/*
 	ft_memccpy_test();
 	ft_memmove_test();
+/*
 	ft_memchr_test();
 	ft_memcmp_test();
 	ft_strlen_test();
