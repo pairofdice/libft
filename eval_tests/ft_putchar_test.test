@@ -16,8 +16,17 @@ int	main(void)
 {
 	char	c;
 
+	ft_putchar('\t');
 	c = 'a';
 	while (c <= 'z')
+	{
+		ft_putchar(c);
+		c++;
+	}
+	ft_putchar('\n');
+	ft_putchar('\t');
+	c = 'A';
+	while (c <= 'Z')
 	{
 		ft_putchar(c);
 		c++;

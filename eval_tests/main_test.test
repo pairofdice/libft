@@ -22,8 +22,8 @@ int main(void)
 	ft_strlcat_test();
 	ft_strchr_test();
 	ft_strrchr_test();
-	ft_strstr_test();
 /*
+	ft_strstr_test();
 	ft_strnstr_test();
 	ft_strcmp_test();*/
 	ft_strncmp_test();
