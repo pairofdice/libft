@@ -82,11 +82,11 @@ void ft_memcmp_test(void)
 	{
 
 		if (memcmp_1(test_A[i], test_B[i], ints[i]) != 0)
-			printf(BHGRN "💚" reset);
+			printf("💚");
 		else
 		{
 			
-			printf(BHRED "💔" reset);
+			printf("💔");
 			/* printf("\ninput:   \t%s %s %zu", test_A[i], ints[i]);
 			printf("\nmemset:    \t%d", memset(mem, test_A[i], ints[i]));
 			printf("\nft_memset: \t%d\n\t\t", ft_memset(mem, test_A[i], ints[i])); */

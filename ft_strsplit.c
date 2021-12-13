@@ -13,21 +13,12 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static int	ft_wordcount(char const *s, char c, int wordcount)
+static char	**ft_free_words(char **words, int i)
 {
-	while (*s)
-	{
-		while (*s == c && *s)
-			s++;
-		if (*s != c && *s)
-		{
-			wordcount++;
-			s++;
-		}
-		while (*s != c && *s)
-			s++;
-	}
-	return (wordcount);
+	while (i--)
+		free(words[i]);
+	ft_strdel(words);
+	return (NULL);
 }
 
 static char	**ft_wordmalloc(char const *s, char c, int wordcount, char **words)
@@ -49,7 +40,7 @@ static char	**ft_wordmalloc(char const *s, char c, int wordcount, char **words)
 				wordlen++;
 			words[i] = (char *)malloc(sizeof(char) * (wordlen + 1));
 			if (!words[i])
-				return (NULL);
+				return (ft_free_words(words, i));
 			ft_strncpy(words[i], wordstart, wordlen);
 			words[i][wordlen] = '\0';
 			i++;

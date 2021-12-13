@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static void	ft_null_zero(t_list	**new)
+static void	ft_setnullzero(t_list	**new)
 {
 	(*new)->content = NULL;
 	(*new)->content_size = 0;
@@ -27,7 +27,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	if (!new)
 		return (NULL);
 	if (!content || content_size == 0)
-		ft_null_zero(&new);
+		ft_setnullzero(&new);
 	else
 	{
 		new->content = (void *)malloc(content_size);

@@ -67,11 +67,11 @@ void ft_atoi_test(void)
 	{
 		char *str = teststrs[i];
 		if (atoi_1(str) != 0)
-			printf(BHGRN "💚" reset);
+			printf("💚");
 		else
 		{
 			
-			printf(BHRED "\t\t💔" reset);
+			printf("\t\t💔");
 			printf("\ninput:   \t%s", str);
 			printf("\natoi:    \t%d", atoi(str));
 			printf("\nft_atoi: \t%d\n\t\t", ft_atoi(str));

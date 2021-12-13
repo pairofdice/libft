@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 20:24:57 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/07 14:15:31 by jsaarine         ###   ########.fr       */
+/*   Created: 2021/12/13 14:22:54 by jsaarine          #+#    #+#             */
+/*   Updated: 2021/12/13 14:22:56 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalpha(int c)
+int	ft_wordcount(char const *s, char c, int wordcount)
 {
-	if (ft_islower(c) || ft_isupper(c))
-		return (1);
-	return (0);
+	while (*s)
+	{
+		while (*s == c && *s)
+			s++;
+		if (*s != c && *s)
+		{
+			wordcount++;
+			s++;
+		}
+		while (*s != c && *s)
+			s++;
+	}
+	return (wordcount);
 }

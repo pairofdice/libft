@@ -94,9 +94,9 @@ void ft_strlcat_test(void)
 	while (funs[f_i] != 0)
 	{
 		if (funs[f_i]() != 0)
-			printf(GRN "[OK]" reset);
+			printf("💚");
 		else
-			printf(RED "-fail-" reset);
+			printf("💔");
 		f_i++;
 	}
 	printf("\n");

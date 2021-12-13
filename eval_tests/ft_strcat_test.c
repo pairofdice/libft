@@ -17,66 +17,57 @@
 #include <stdlib.h>
 
 
-int strncmp_1(const char *a, const char *b, size_t n)
+int strcat_1(char *strA, char *strB)
 {
-	if (strncmp(a, b, n) == ft_strncmp(a, b, n))
+	void	*memREF;
+	void	*memME;
+
+	if (!(memREF = malloc(sizeof(*memREF) * 15)))
+		return (0);
+	memset(memREF, 'j', 15);
+
+	if (!(memME = malloc(sizeof(*memME) * 15)))
+		return (0);
+	memset(memME, 'j', 15);
+
+	if ( memcmp(strcat(strA, strB), ft_strcat(strA, strB), 15) == 0)
 		return (1);
 	return (0);
 }
 
-	/* int (*funs[])(char *) = {atoi_1, atoi_1, atoi_1, atoi_1, 
-				atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, atoi_1, 0}; */
-void ft_strncmp_test(void)
+	/* int (*funs[])(char *) = {atoi_1, atoi_1, 0}; */
+void ft_strcat_test(void)
 {
 	int i = 0;
+	void	*mem;
 
-	char *test_A[] = {
-		"salut", 
-		"test", 
-		"testss", 
-		"test", 
-		"", 
-		"test", 
-		"abcdefghij", 
-		"abcdefgh", 
-		"zyxbcdefgh", 
-		"abcdefgh", 
-		"test\200", 
-		NULL,
+	if (!(mem = malloc(sizeof(*mem) * 15)))
+		return ;
+	memset(mem, 'j', 15);
+
+	char test_A[] = {
+		'c',
+		'c',
+		'\n',
+		'\0',
 		0
 	};
 
-	char *test_B[] = {
-		"salut", 
-		"testss", 
-		"test", 
-		"tEst", 
-		"test", 
-		"", 
-		"abcdefgxyz", 
-		"abcdwxyz", 
-		"abcdwxyz", 
-		"", 
-		"test\0", 
-		NULL,
-		0
-	};
+	size_t ints[] = {5, 14, 6, 1};
 
-	size_t ints[] = {5,7,7,4,4,4,3,4,0,0,6,0};
-
-	printf("ft_strncmp: \t");
+	printf("ft_strcat: \t");
 	while (test_A[i] != 0)
 	{
 
-		if (strncmp_1(test_A[i], test_B[i], ints[i]) != 0)
+		if (strcat_1(test_A[i], ints[i]) != 0)
 			printf("💚");
 		else
 		{
 			
-			printf("\t\t💔");
-			printf("\ninput:   \t%s %s %zu", test_A[i], test_B[i], ints[i]);
-			printf("\nstrncmp:    \t%d", strncmp(test_A[i], test_B[i], ints[i]));
-			printf("\nft_strncmp: \t%d\n\t\t", ft_strncmp(test_A[i], test_B[i], ints[i]));
+			printf("💔");
+			/* printf("\ninput:   \t%s %s %zu", test_A[i], ints[i]);
+			printf("\nmemset:    \t%d", memset(mem, test_A[i], ints[i]));
+			printf("\nft_memset: \t%d\n\t\t", ft_memset(mem, test_A[i], ints[i])); */
 		}
 		i++;
 	}

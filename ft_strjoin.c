@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static void	ft_strjoinloop(char const *s1, char const *s2, char **freshness)
+static void	ft_strjoinloops(char const *s1, char const *s2, char **freshness)
 {
 	int	i;
 	int	s1len;
@@ -45,7 +45,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	freshness = (char *)malloc(sizeof(char) * (len + 1));
 	if (!freshness)
 		return (NULL);
-	ft_strjoinloop(s1, s2, &freshness);
+	ft_strjoinloops(s1, s2, &freshness);
 	freshness[len] = '\0';
 	return (freshness);
 }
