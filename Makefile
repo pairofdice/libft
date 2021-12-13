@@ -33,6 +33,7 @@ SRCS =	ft_memset.c		ft_bzero.c		ft_memcpy.c		ft_memccpy.c	\
 		ft_lstiter.c	ft_lstmap.c		\
 		\
 		ft_iswhitespace.c	ft_islower.c	ft_isupper.c	ft_wordcount.c	\
+		ft_min.c 		ft_max.c		ft_abs.c
 
 
 

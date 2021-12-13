@@ -90,5 +90,9 @@ int		ft_iswhitespace(char c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_wordcount(char const *s, char c, int wordcount);
+int		ft_min(int a, int b);
+int		ft_max(int a, int b);
+int		ft_abs(int a);
+// power
 
 #endif
