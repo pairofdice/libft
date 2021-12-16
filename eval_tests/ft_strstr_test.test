@@ -15,6 +15,9 @@
 
 int	main(void)
 {
-	printf("REF:  ", strstr("Hello","el"));
-	printf("mine: ", ft_strstr("Hello","el"));
+	printf("REF:  %s\n", strstr("Hello","el"));
+	printf("mine: %s\n\n", ft_strstr("Hello","el"));
+
+	printf("REF:  %s\n", strstr("Hello","elloello"));
+	printf("mine: %s\n", ft_strstr("Hello","elloello"));
 }
