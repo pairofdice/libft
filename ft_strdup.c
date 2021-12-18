@@ -21,7 +21,11 @@ char	*ft_strdup(const char *src)
 	if (!dest)
 		return (NULL);
 	while (*src)
-		*dest++ = *src++;
+	{	
+		*dest = *src;
+		dest++;
+		src++;
+	}
 	*dest = '\0';
 	return (dest);
 }
