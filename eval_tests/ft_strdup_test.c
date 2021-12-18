@@ -37,63 +37,22 @@ int strdup_1()
 
 
 	memREF = strdup(test);
-	int i = 0;
-	ft_putchar('\n');
-	while (i < 20)
-	{
-		ft_putchar(memREF[i]);
-		i++;
-	}
-	ft_putchar('\n');
-	printf("\n%s\n", memREF);
 	memME = ft_strdup(test);
-	i = 0;
-	ft_putchar('\n');
-	while (i < 20)
-	{
-		ft_putchar(memREF[i]);
-		i++;
-	}
-	ft_putchar('\n');
-	printf("\n%s\n", memME);
-	if ( memcmp(memREF, memME, 30) == 0)
+	if ( memcmp(memREF, memME, ft_strlen(test)) == 0)
 		return (1);
 	return (0);
 }
 
-	/* int (*funs[])(char *) = {atoi_1, atoi_1, 0}; */
 void ft_strdup_test(void)
 {
-	int i = 0;
-	void	*mem;
-
-	if (!(mem = malloc(sizeof(*mem) * 15)))
-		return ;
-	memset(mem, 'j', 15);
-
-	char *test_A[] = {
-		"zyxwvutsrqponmlkjihgfedcba",
-		"zyxwvutst",
-		"zy\0xw\0vu\0\0tsr",
-		"",
-		0
-	};
-
-	size_t ints[] = {14, 0, 11, 1};
-
 	printf("ft_strdup: \t");
 
 	if (strdup_1() == 1)
 		printf("💚");
 	else
 	{
-		
 		printf("💔");
-		/* printf("\ninput:   \t%s %s %zu", test_A[i], ints[i]);
-		printf("\nmemset:    \t%d", memset(mem, test_A[i], ints[i]));
-		printf("\nft_memset: \t%d\n\t\t", ft_memset(mem, test_A[i], ints[i])); */
 	}
-	i++;
 
 	printf("\n");
 }
