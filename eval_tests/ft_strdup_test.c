@@ -35,9 +35,12 @@ int strdup_1()
 
 	char test[] = "Hello \0 World";
 
-
 	memREF = strdup(test);
 	memME = ft_strdup(test);
+<<<<<<< HEAD
+=======
+
+>>>>>>> b1f79ecc0f431ca732f35479b2eee35efbe950d3
 	if ( memcmp(memREF, memME, ft_strlen(test)) == 0)
 		return (1);
 	return (0);
@@ -51,6 +54,10 @@ void ft_strdup_test(void)
 		printf("💚");
 	else
 	{
+<<<<<<< HEAD
+=======
+
+>>>>>>> b1f79ecc0f431ca732f35479b2eee35efbe950d3
 		printf("💔");
 	}
 
