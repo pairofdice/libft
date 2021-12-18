@@ -44,7 +44,7 @@ HDRS = libft.h
 all: $(NAME)
 
 $(NAME): 
-	gcc $(FLAGS) $(SRCS) -c -I$(HDRS)
+	gcc $(FLAGS) $(SRCS) -c $(HDRS)
 	ar rc $(NAME) $(OBJS)
 
 clean:
