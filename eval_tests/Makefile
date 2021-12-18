@@ -7,12 +7,12 @@ SRCS = 	ft_strcpy_test.c ft_atoi_test.c ft_bzero_test.c \
 	ft_strncmp_test.c ft_strncpy_test.c ft_strncat_test.c \
 	ft_strlcat_test.c ft_strchr_test.c ft_strrchr_test.c
 
-HDRS = libft_test.h 
+HDRS = libft_test.h
 
 all: $(NAME)
 
-$(NAME): 
-	gcc main_test.c $(SRCS) ../libft.a libft_test.h -o $(NAME)
+$(NAME):
+	gcc -g -o $(NAME) main_test.c $(SRCS) ../libft.a libft_test.h
 
 agane:
 	rm a.out
