@@ -1,10 +1,7 @@
 a.out
+a.exe
 *.swp
 *.o
 *.a
 *.gch
-eval_tests/test/
-test
 main.c
-mytest.c
-.gitignore

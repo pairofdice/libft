@@ -12,7 +12,7 @@ HDRS = libft_test.h
 all: $(NAME)
 
 $(NAME):
-	gcc -g -o $(NAME) main_test.c $(SRCS) ../libft.a libft_test.h
+	gcc -g main_test.c $(SRCS) ../libft.a libft_test.h
 
 agane:
 	rm a.out

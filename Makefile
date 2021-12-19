@@ -6,7 +6,7 @@
 #    By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 12:23:08 by jsaarine          #+#    #+#              #
-#    Updated: 2021/11/24 16:37:22 by jsaarine         ###   ########.fr        #
+#    Updated: 2021/12/19 10:44:57 by jsaarine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,12 +39,12 @@ SRCS =	ft_memset.c		ft_bzero.c		ft_memcpy.c		ft_memccpy.c	\
 
 OBJS = $(SRCS:.c=.o)
 
-HDRS = libft.h 
+HDRS = libft.h
 
 all: $(NAME)
 
-$(NAME): 
-	gcc $(FLAGS) $(SRCS) -c $(HDRS)
+$(NAME):
+	gcc -g $(FLAGS) $(SRCS) -c $(HDRS)
 	ar rc $(NAME) $(OBJS)
 
 clean:
