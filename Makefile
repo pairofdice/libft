@@ -6,7 +6,7 @@
 #    By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 12:23:08 by jsaarine          #+#    #+#              #
-#    Updated: 2022/01/10 19:33:15 by jsaarine         ###   ########.fr        #
+#    Updated: 2022/01/10 19:52:58 by jsaarine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRCS =	ft_memset.c		ft_bzero.c		ft_memcpy.c		ft_memccpy.c	\
 		ft_iswhitespace.c	ft_islower.c	ft_isupper.c	ft_wordcount.c	\
 		ft_min.c 		ft_max.c		ft_abs.c						\
 		\
-		vec_new.c		vec_free.c		vec_from.c
+		vec_new.c		vec_free.c		vec_from.c		vec_resize.c
 
 
 
