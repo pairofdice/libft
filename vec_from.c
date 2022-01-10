@@ -1,0 +1,12 @@
+#include "libft.h"
+
+int	vec_from(t_vec *dst, void *src, size_t len, size_t elem_size)
+{
+	if (!src)
+		return (-1);
+	if (vec_new(dst, len * 2, elem_size) == -1)
+		return (-1);
+	ft_memcpy(dst->memory, src, dst->alloc_size);
+	dst->len = len;
+	return (1);
+}

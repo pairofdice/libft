@@ -9,6 +9,9 @@ SRCS = 	ft_strcpy_test.c ft_atoi_test.c ft_bzero_test.c \
 
 HDRS = libft_test.h
 
+FLAGS = -Wall -Wextra -Werror -Wpedantic -Wunreachable-code -Wtype-limits
+
+
 all: $(NAME)
 
 $(NAME):
@@ -17,3 +20,6 @@ $(NAME):
 agane:
 	rm a.out
 	make all
+
+vectest:
+	clang $(FLAGS) vec_test_main.c ../libft.a
