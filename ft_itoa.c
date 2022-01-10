@@ -6,12 +6,11 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:29:14 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/20 16:39:40 by jsaarine         ###   ########.fr       */
+/*   Updated: 2022/01/10 11:49:51 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static unsigned int	ft_nbrlen(long int n)
 {

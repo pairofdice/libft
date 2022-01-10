@@ -6,11 +6,10 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:03:22 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/12/19 07:47:15 by jsaarine         ###   ########.fr       */
+/*   Updated: 2022/01/10 11:54:08 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *src)

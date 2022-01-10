@@ -6,11 +6,10 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 17:31:45 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/26 15:41:22 by jsaarine         ###   ########.fr       */
+/*   Updated: 2022/01/10 11:50:20 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static void	ft_setnullzero(t_list	**new)

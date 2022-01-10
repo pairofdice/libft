@@ -6,11 +6,10 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 12:52:27 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/22 17:47:34 by jsaarine         ###   ########.fr       */
+/*   Updated: 2022/01/10 11:54:57 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static char	**ft_free_words(char **words, int i)

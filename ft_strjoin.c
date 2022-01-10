@@ -6,11 +6,10 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 11:58:16 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/26 15:29:19 by jsaarine         ###   ########.fr       */
+/*   Updated: 2022/01/10 11:54:17 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static void	ft_strjoinloops(char const *s1, char const *s2, char **freshness)

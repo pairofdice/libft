@@ -6,11 +6,10 @@
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 18:21:31 by jsaarine          #+#    #+#             */
-/*   Updated: 2021/11/22 17:40:32 by jsaarine         ###   ########.fr       */
+/*   Updated: 2022/01/10 11:54:30 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
