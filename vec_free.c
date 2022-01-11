@@ -1,5 +1,7 @@
 #include "libft.h"
-
+/*
+	frees the allocated resources in src and zeroes its fields.
+ */
 void	vec_free(t_vec *src)
 {
 	if (!src || !src->memory)

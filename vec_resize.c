@@ -1,5 +1,9 @@
 #include "libft.h"
-
+/*
+	take in a target_size parameter and either shrink (destructively)
+	or grow the vector to the target size, copying the old contents
+	over to the new allocation.
+*/
 int	vec_resize(t_vec *src, size_t target_size)
 {
 	t_vec resized;

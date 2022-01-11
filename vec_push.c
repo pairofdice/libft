@@ -1,5 +1,8 @@
 #include "libft.h"
-
+/*
+	takes in a vector and a pointer to an element to be pushed to the
+	end of the vector.
+ */
 int	vec_push(t_vec *src, void *elem)
 {
 	if (!src || !elem)

@@ -1,7 +1,8 @@
 #include "libft.h"
-
-// take a pointer to a t_vec and allocate len * elem_size bytes
-// in the buffer as well as initialize its length and element size.
+/*
+	take a pointer to a t_vec and allocate len * elem_size bytes
+	in the buffer as well as initialize its length and element size.
+*/
 int	vec_new(t_vec *src, size_t init_len, size_t elem_size)
 {
 	if (!src || elem_size == 0)
