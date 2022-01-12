@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   vec_resize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/12 20:03:27 by jsaarine          #+#    #+#             */
+/*   Updated: 2022/01/12 20:08:53 by jsaarine         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
 	take in a target_size parameter and either shrink (destructively)
@@ -6,7 +18,7 @@
 */
 int	vec_resize(t_vec *src, size_t target_size)
 {
-	t_vec resized;
+	t_vec	resized;
 
 	if (!src || !src->memory)
 		return (-1);

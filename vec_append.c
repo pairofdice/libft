@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec_from.c                                         :+:      :+:    :+:   */
+/*   vec_append.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaarine <jsaarine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/12 20:03:45 by jsaarine          #+#    #+#             */
-/*   Updated: 2022/01/12 20:04:05 by jsaarine         ###   ########.fr       */
+/*   Created: 2022/01/12 20:03:52 by jsaarine          #+#    #+#             */
+/*   Updated: 2022/01/12 20:10:24 by jsaarine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*
-	takes in a pointer to some memory, which then will
-	be copied over to the new vector.
+	appends vector src to dst
 */
-int	vec_from(t_vec *dst, void *src, size_t len, size_t elem_size)
+int	vec_append(t_vec *dst, t_vec *src)
 {
-	if (!src)
-		return (-1);
-	if (vec_new(dst, len, elem_size) == -1)
-		return (-1);
-	ft_memcpy(dst->memory, src, dst->alloc_size);
-	dst->len = len;
 	return (1);
 }
